@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewScreen extends StatefulWidget {
-  const WebViewScreen({super.key});
+  final String url;
+  const WebViewScreen({super.key, required this.url});
   @override
   State<WebViewScreen> createState() => _WebViewScreen();
 }
@@ -21,7 +22,7 @@ class _WebViewScreen extends State<WebViewScreen> {
         onWebResourceError: (WebResourceError error) {},
       ),
     )
-    ..loadRequest(Uri.parse('https://github.com/kimjuno97'));
+    ..loadRequest(Uri.parse(widget.url));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
