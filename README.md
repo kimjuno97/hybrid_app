@@ -1,15 +1,10 @@
 # flutter 간단한 WebView app 만들기
 
-### 1차 개발 목표
+### 개발 목표
 
-- 자주 방문하는 WebUrl목록을 만들어 바로 접속하기
-
----
-
-### 2차 개발 목표
-
-- home widget 만들어서 즐겨찾기 처럼 사용하기
-  https://pub.dev/packages/home_widget
+- [x] 자주 방문하는 WebUrl목록을 만들어 바로 접속하기
+- [ ] home widget 만들어서 즐겨찾기 처럼 사용하기
+  - https://pub.dev/packages/home_widget
 
 ---
 
