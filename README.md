@@ -21,6 +21,10 @@
 2. 불러온 주소를 리스트로 보여준다.
 3. 리스트는 삭제 및 추가만 할 수 있다. (수정을 제공할 필요 없는것 같음)
 
+#### [web_view_screen](https://kimjunho97.tistory.com/37) < 구현 과정 기록
+
+1. [webview_flutter library](https://pub.dev/documentation/webview_flutter/latest/webview_flutter/webview_flutter-library.html)
+
 ### android settings
 
 - #### android/app/src/AndroidManifest.xml에 android:usesCleartextTraffic="true" 추가
