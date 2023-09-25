@@ -37,6 +37,7 @@ dependencies:
 
   webview_flutter: ^4.2.4
   shared_preferences: ^2.2.0
+  home_widget: ^0.3.0
 
 dev_dependencies:
   flutter_test:
