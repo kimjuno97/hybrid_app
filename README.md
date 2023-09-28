@@ -3,24 +3,35 @@
 ### 개발 목표
 
 - [x] 자주 방문하는 WebUrl목록을 만들어 바로 접속하기
-- [ ] home widget 만들어서 즐겨찾기 처럼 사용하기
-  - https://pub.dev/packages/home_widget
+- [x] home widget 만들어서 즐겨찾기 처럼 사용하기
+
+  > url최상위 url 링크로 접속하는 위젯을 만들었습니다.
+
+- [ ] ios App Widget은 apple developer 등록 후 구현
 
 ---
 
-### Screen별 기능 소개
+### 기능별 포스팅
 
-#### [url_list_screen](https://kimjunho97.tistory.com/35) < 구현 과정 기록
+#### [url_list_screen](https://kimjunho97.tistory.com/35)
 
 1. local에 url주소를 저장하고 불러온다.
 2. 불러온 주소를 리스트로 보여준다.
 3. 리스트는 삭제 및 추가만 할 수 있다. (수정을 제공할 필요 없는것 같음)
 
-#### [web_view_screen](https://kimjunho97.tistory.com/37) < 구현 과정 기록
+#### [web_view_screen](https://kimjunho97.tistory.com/37)
 
 1. [webview_flutter library](https://pub.dev/documentation/webview_flutter/latest/webview_flutter/webview_flutter-library.html)
 
-### android settings
+#### [flutter 간단한 WebView app 만들기 (home_widget 전편)](https://kimjunho97.tistory.com/38)
+
+- home_widget 하나 띄워보기
+
+#### [flutter 간단한 WebView app 만들기 (home_widget 후편)](https://kimjunho97.tistory.com/39)
+
+---
+
+### android settings 이슈
 
 - #### android/app/src/AndroidManifest.xml에 android:usesCleartextTraffic="true" 추가
 
