@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_widget/home_widget.dart';
 import 'package:hybrid_app/utils/is_url.dart';
 import 'package:hybrid_app/web_view_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,10 +16,25 @@ class _UrlListScreenState extends State<UrlListScreen> {
   final TextEditingController _textEditingController = TextEditingController();
   List<String> _itemList = [];
   final TextStyle _textStyle = const TextStyle(color: Colors.white);
+
   @override
   void initState() {
     _getUrlList();
+    _checkForWidgetLaunch();
+    HomeWidget.widgetClicked.listen(_launchedFromWidget);
     super.initState();
+  }
+
+  /// Checks if the App was initially launched via the Widget
+  void _checkForWidgetLaunch() {
+    HomeWidget.initiallyLaunchedFromHomeWidget().then(_launchedFromWidget);
+  }
+
+  void _launchedFromWidget(Uri? uri) {
+    if (uri != null) {
+      /// home_widget을 클릭 한 후에 하고 싶은 동작을 아래에 자유롭게 수정
+      _navigateToWebView(_itemList.first);
+    }
   }
 
   Future<void> _getUrlList() async {
