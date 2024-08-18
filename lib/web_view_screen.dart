@@ -14,10 +14,19 @@ class _WebViewScreen extends State<WebViewScreen> {
     ..loadRequest(Uri.parse(widget.url));
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: WebViewWidget(
-          controller: controller,
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop) async {
+        if (await controller.canGoBack()) {
+          controller.goBack();
+          return; // 웹뷰 내에서 뒤로 가기 처리
+        }
+      },
+      child: Scaffold(
+        body: SafeArea(
+          child: WebViewWidget(
+            controller: controller,
+          ),
         ),
       ),
     );
